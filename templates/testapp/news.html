@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+</head>
+    <body>
+        <h1>{{head_msg}}</h1>
+        <ul>
+          <li><b>{{sub_msg1}}</b></li>
+          <li><b>{{sub_msg2}}</b></li>
+          <li><b>{{sub_msg3}}</b></li>
+        </ul>
+        {% if type == 'movies' %}
+        <img src="{% static 'images/jailer.jpeg' %}" alt="">
+        <img src="{% static 'images/kushi.jpeg' %}" alt="">
+        <img src="{% static 'images/mem famous.jpeg' %}" alt="">
+        {% elif type == 'sports' %}
+        <img src="{% static 'images/sports.jpg' %}" alt="">
+        <img src="{% static 'images/sports.jpg' %}" alt="">
+        <img src="{% static 'images/sports.jpg' %}" alt="">
+        {% elif type == 'politics' %}
+        <img src="{% static 'images/news.jpg' %}" alt="">
+        <img src="{% static 'images/news.jpg' %}" alt="">
+        <img src="{% static 'images/news.jpg' %}" alt="">
+        {% endif %}
+</body>
+</html>
